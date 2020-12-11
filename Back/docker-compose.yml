@@ -1,0 +1,20 @@
+version: "3"
+networks:
+  postgres:
+# volumes:
+#   db-data:
+services:
+  postgres:
+    image: postgres:10
+    tty: true
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=pazu
+    # volumes:
+    #   - db-data:/var/lib/postgresql/data/
+    ports:
+      - "5432:5432"
+    networks:
+      - postgres
+    restart: unless-stopped
