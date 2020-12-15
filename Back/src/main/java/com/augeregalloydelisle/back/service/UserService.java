@@ -23,22 +23,25 @@ public class UserService {
         return userRepository.save(user);
     }
 
-    public User login(String userName, String password)
-    throws RessourceNotFoundException, ForbiddenException
-    {
+    public User login(String userName, String password) throws RessourceNotFoundException, ForbiddenException {
         Optional<User> user = userRepository.findByUsername(userName);
-            if (user.isEmpty()) {
-                throw new RessourceNotFoundException("User Not Found with UserName =" + userName);           
+        if (user.isEmpty()) {
+            throw new RessourceNotFoundException("User Not Found with UserName =" + userName);
         }
         User u = user.get();
-            if (u.getPassword().equals(password))
-            {
-                return u ;
-            }
-            else
-            {
-                throw new ForbiddenException("UserName or Password are incorrect");
-            }
+        if (u.getPassword().equals(password)) {
+            return u;
+        } else {
+            throw new ForbiddenException("UserName or Password are incorrect");
+        }
     }
-    
+
+    public User findByUserName(String userName) {
+        Optional<User> user = userRepository.findByUsername(userName);
+        if (user.isEmpty()) {
+            throw new RessourceNotFoundException("User Not Found with UserName =" + userName);
+        }
+        return user.get();
+    }
+
 }

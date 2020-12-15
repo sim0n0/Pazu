@@ -1,6 +1,5 @@
 package com.augeregalloydelisle.back.exception;
 
-import org.apache.logging.log4j.message.Message;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.ResponseStatus;
 
