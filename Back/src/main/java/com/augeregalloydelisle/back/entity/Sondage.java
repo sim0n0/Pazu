@@ -34,13 +34,13 @@ public class Sondage {
     private List<Proposition> propositions = new ArrayList<>();
 
     @ManyToOne(targetEntity = User.class)
-    private User createur;
+    private User owner;
 
-    public Sondage(String title, String place, List<Proposition> propositions, User createur) {
+    public Sondage(String title, String place, List<Proposition> propositions, User owner) {
         this.title = title;
         this.place = place;
         this.propositions = propositions;
-        this.createur = createur;
+        this.owner = owner;
     }
 
     public Integer getId() {
@@ -75,12 +75,12 @@ public class Sondage {
         this.propositions = propositions;
     }
 
-    public User getCreateur() {
-        return createur;
+    public User getOwner() {
+        return owner;
     }
 
-    public void setCreateur(User createur) {
-        this.createur = createur;
+    public void setOwner(User owner) {
+        this.owner = owner;
     }
 
 }
