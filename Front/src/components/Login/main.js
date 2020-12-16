@@ -21,8 +21,12 @@ export default {
                     "userName":this.username,
                     "password":this.password
                 }
+                //headers:{
+                //    "Authorization":"Bearer "+this.$session.get("token")
+               // }
             }).then((respond)=>{
                 console.log(respond.data)
+                this.$session.set("token",respond.data.token)
             }).catch((error)=>{
                 console.log(error.data)
             })
