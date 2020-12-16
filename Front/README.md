@@ -1,4 +1,4 @@
-# pazu
+npm# pazu
 
 ## Project setup
 ```
