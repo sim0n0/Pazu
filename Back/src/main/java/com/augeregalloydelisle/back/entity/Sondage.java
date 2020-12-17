@@ -43,6 +43,9 @@ public class Sondage {
         this.owner = owner;
     }
 
+    public Sondage() {
+    }
+
     public Integer getId() {
         return id;
     }
