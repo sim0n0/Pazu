@@ -9,13 +9,15 @@
     link(rel='stylesheet', href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css')
    // link(rel='stylesheet', href='style.css')
   body
-#halo
-    b-col.text-center
-     form(@submit.prevent.stop="onSubmit")
-       div.label Register Page
-       div.username
-        input(type="text" placeholder="username" v-model="username")
-       div.password
-        input(type="password" placeholder="password" v-model="password")
 
-       button(type="submit") create
+#halo
+    body
+        b-col.text-center
+         form(@submit.prevent.stop="onSubmit")
+           div.label Register Page
+           div.username
+            input(type="text" placeholder="username" v-model="username")
+           div.password
+            input(type="password" placeholder="password" v-model="password")
+
+           button(type="submit") create

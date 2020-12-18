@@ -8,9 +8,13 @@
         #navbarSupportedContent.collapse.navbar-collapse
           ul.navbar-nav.me-auto.mb-2.mb-lg-0
             li.nav-item(v-show="this.$session.get('token')===undefined")
-              a.nav-link.active(aria-current='page' href='/#/login') Login
+                a.nav-link.active(aria-current='page' href='/#/login') Login
             li.nav-item(v-show="this.$session.get('token')===undefined")
-              a.nav-link.active(aria-current='page' href='/#/register') Register
+                a.nav-link.active(aria-current='page' href='/#/register') Register
+            li.nav-item(v-show="this.$session.get('token')!==undefined")
+
+
+
             li.nav-item(v-show="this.$session.get('token')!==undefined")
               b-button.nav-link.active(aria-current='page' @click="logout" ) Logout
 

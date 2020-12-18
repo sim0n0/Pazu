@@ -3,6 +3,7 @@ export default {
     name: 'Navigation',
     data: function() {
         return {
+
         }
     },
     computed: {
@@ -13,7 +14,8 @@ export default {
             this.$session.remove('token')
             this.$store.commit("setAuth",false)
             this.$forceUpdate()
-        }
+        },
+
     },
     components: {
 

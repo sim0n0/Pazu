@@ -3,11 +3,56 @@
         .card
           .card-body
             h5.card-title Vous êtes connecté
-            p.card-text With supporting text below as a natural lead-in to additional content.
-            a.btn.btn-primary(href='#') Go somewhere
-    .col-sm-6(v-else)
+            p.card-text
+            //a.btn.btn-primary(href='#') Go somewhere
+        b-button(v-b-modal.modal-1='') Soumettre une réunion
+            b-modal#modal-1(title='Sondage' @hidden="reset" hide-footer centered)
+                b-form(@submit.prevent.stop="sondage")
+                    label.sr-only(for='inline-form-input-name') Title
+                    b-form-input#inline-form-input-name.mb-2.mr-sm-2.mb-sm-0(placeholder='Title' v-model="title")
+                    p
+                    label.sr-only(for='inline-form-input-username') Place
+                    b-input-group.mb-2.mr-sm-2.mb-sm-0
+                        b-form-input#inline-form-input-username(placeholder='Place' v-model="place")
+                    p
+                    b-button(v-b-modal.modal-2='') add
+                    p
+                    b-button(type="submit") Send
+
+
+            b-modal#modal-2(title='propositions' hide-footer centered)
+                label(for='example-datepicker')
+                b-form-datepicker#example-datepicker.mb-2(v-model='date')
+                b-time.border.rounded.p-2(locale='fr' v-model='start' hourCycle='h24') start
+                b-time.border.rounded.p-2(locale='fr' v-model='finish' hourCycle='h24') finish
+                b-button(type="submit" @submit.prevent="addProposition" @click.prevent="addProposition") Add
+
+    .col-sm-3(v-else)
       .card
         .card-body
-            h5.card-title Special title treatment
-            p.card-text With supporting text below as a natural lead-in to additional content.
-            a.btn.btn-primary(href='#') Go somewhere
+            h5.card-title Connectez-vous !
+
+
+
+    .row.justify-content-center(v-if="this.$store.state.auth")
+        b-card(v-for="sondage in list" :key="sondage.id")
+            p {{sondage.title}}
+            p {{sondage.place}}
+            b-card(v-for="propositions in sondage.propositions" :key="sondage.propositions")
+                p {{propositions.date}}
+                p {{propositions.start}}
+                p {{propositions.finish}}
+                b-dropdown#dropdown-1.m-md-2(text='Vote')
+                  b-dropdown-item yes
+                    b-button(type="submit" @click.prevent="vote('Yes',propositions.id)") Send
+                  b-dropdown-item no
+                    b-button(type="submit" @click.prevent="vote('No',propositions.id)") Send
+                  b-dropdown-item delete
+                    b-button(type="submit" @click.prevent="vote('Delete',propositions.id)") Send
+                p {{propositions.yes.length}} yes
+                p {{propositions.no.length}} no
+
+
+
+
+

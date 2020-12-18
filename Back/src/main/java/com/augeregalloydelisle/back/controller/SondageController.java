@@ -19,6 +19,7 @@ import java.util.Map;
 import java.util.Optional;
 
 @RestController
+@CrossOrigin(origins="*")
 @RequestMapping("/api/sondage")
 public class SondageController {
     @Autowired
