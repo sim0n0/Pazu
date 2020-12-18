@@ -1,5 +1,3 @@
-# pazu
-
 ## Project setup
 ```
 npm install

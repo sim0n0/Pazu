@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 export default {
-    name: 'Pazi',
+    name: 'Navigation',
     data: function() {
         return {
         }
