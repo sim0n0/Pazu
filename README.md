@@ -8,7 +8,7 @@ Activation de la base de donnée :
     docker-compose up -d
 
 Activation du back :
-    ./mvnw spring-boot:run
+    ./mvnw spring-boot:run (! ou .\mvnw spring-boot:run)
 
 Activation du front :
     npm install
