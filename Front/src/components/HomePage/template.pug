@@ -4,9 +4,9 @@
           .card-body
             h5.card-title Vous êtes connecté
             p.card-text
-            //a.btn.btn-primary(href='#') Go somewhere
+
         b-button(v-b-modal.modal-1='') Soumettre une réunion
-            b-modal#modal-1(title='Sondage' @hidden="reset" hide-footer centered)
+            b-modal#modal-1(ref='my-modal' title='Sondage' @hidden="reset" hide-footer centered)
                 b-form(@submit.prevent.stop="sondage")
                     label.sr-only(for='inline-form-input-name') Title
                     b-form-input#inline-form-input-name.mb-2.mr-sm-2.mb-sm-0(placeholder='Title' v-model="title")
@@ -17,7 +17,7 @@
                     p
                     b-button(v-b-modal.modal-2='') add
                     p
-                    b-button(type="submit") Send
+                    b-button(type="submit" @click.prevent='hideModal') Send
 
 
             b-modal#modal-2(title='propositions' hide-footer centered)
