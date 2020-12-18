@@ -1,20 +1,13 @@
-<div class="row">
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-  <div class="col-sm-6">
-    <div class="card">
-      <div class="card-body">
-        <h5 class="card-title">Special title treatment</h5>
-        <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-        <a href="#" class="btn btn-primary">Go somewhere</a>
-      </div>
-    </div>
-  </div>
-</div>
+.row.justify-content-center
+    .col-sm-6(v-if="this.$store.state.auth")
+        .card
+          .card-body
+            h5.card-title Vous êtes connecté
+            p.card-text With supporting text below as a natural lead-in to additional content.
+            a.btn.btn-primary(href='#') Go somewhere
+    .col-sm-6(v-else)
+      .card
+        .card-body
+            h5.card-title Special title treatment
+            p.card-text With supporting text below as a natural lead-in to additional content.
+            a.btn.btn-primary(href='#') Go somewhere

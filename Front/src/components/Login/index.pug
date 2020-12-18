@@ -10,12 +10,12 @@
    // link(rel='stylesheet', href='style.css')
   body
 #halo
- form(@submit="onSubmit")
+ form(@submit.prevent.stop="onSubmit")
    div.label login form
    div.username
-    input(type="text" placeholder="username")
+    input(type="text" placeholder="username" v-model="username")
    div.password
-    input(type="password" placeholder="password")
+    input(type="password" placeholder="password" v-model="password")
 
    button(type="submit") login
    p

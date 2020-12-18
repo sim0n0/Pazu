@@ -27,6 +27,8 @@ export default {
             }).then((respond)=>{
                 console.log(respond.data)
                 this.$session.set("token",respond.data.token)
+                this.$store.commit("setAuth",true)
+                this.$router.push('/')
             }).catch((error)=>{
                 console.log(error.data)
             })

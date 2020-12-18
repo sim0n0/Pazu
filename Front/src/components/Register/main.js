@@ -24,9 +24,8 @@ export default {
                 //headers:{
                 //    "Authorization":"Bearer "+this.$session.get("token")
                // }
-            }).then((respond)=>{
-                console.log(respond.data)
-                this.$session.set("token",respond.data.token)
+            }).then(()=>{
+                this.$router.push('/login')
             }).catch((error)=>{
                 console.log(error.data)
             })

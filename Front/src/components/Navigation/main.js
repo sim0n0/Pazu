@@ -9,7 +9,11 @@ export default {
 
     },
     methods: {
-
+        logout(){
+            this.$session.remove('token')
+            this.$store.commit("setAuth",false)
+            this.$forceUpdate()
+        }
     },
     components: {
 

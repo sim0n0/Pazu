@@ -10,11 +10,12 @@
    // link(rel='stylesheet', href='style.css')
   body
 #halo
- form(@submit="onSubmit")
-   div.label Register Page
-   div.username
-    input(type="text" placeholder="username")
-   div.password
-    input(type="password" placeholder="password")
+    b-col.text-center
+     form(@submit.prevent.stop="onSubmit")
+       div.label Register Page
+       div.username
+        input(type="text" placeholder="username" v-model="username")
+       div.password
+        input(type="password" placeholder="password" v-model="password")
 
-   button(type="submit") create
+       button(type="submit") create
