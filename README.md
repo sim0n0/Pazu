@@ -1,4 +1,4 @@
-##Web Project: Pazu 
+## Web Project: Pazu 
 
 
 Ce projet à été réalisé avec différents technologies : Java, Js, Vuejs, Pug. 
