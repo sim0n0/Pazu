@@ -12,7 +12,7 @@ Une API permettant de créer des sondages sur des lieux et date de rendez-vous.
 
 Une API permettant de voté sur les sondages."
 
-Comme base de donnée nous avons utilisé postgresql que nous initialison avec Docker. (lien de DL : https://www.docker.com/products/docker-desktop)
+Comme base de donnée nous avons utilisé postgresql que nous initialisons avec Docker. (lien de DL : https://www.docker.com/products/docker-desktop)
 
 Pour initialiser le projet, suivre les instructions de "Project setup"
 
