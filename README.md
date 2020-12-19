@@ -2,15 +2,15 @@
 
 
 Ce projet à été réalisé avec différents technologies : Java, Js, Vuejs, Pug. 
-Le projet ce divise en deux parties front et back.
+Le projet se divise en deux parties front et back.
 
-Rappel des problèmatiques 
+Rappel des problématiques :
 
-"Une API permettant la gestion d'utilisateur (inscription, login, édition du compte etc ...)
+* Une API permettant la gestion d'utilisateur (inscription, login, édition du compte etc ...)
 
-Une API permettant de créer des sondages sur des lieux et date de rendez-vous. 
+* Une API permettant de créer des sondages sur des lieux et date de rendez-vous. 
 
-Une API permettant de voté sur les sondages."
+* Une API permettant de voté sur les sondages.
 
 Comme base de donnée nous avons utilisé postgresql que nous initialisons avec Docker. (lien de DL : https://www.docker.com/products/docker-desktop)
 
