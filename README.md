@@ -1,8 +1,8 @@
-        PAZU WEB PROJECT
-            Author : Delisle Simon - Galloy Arnaud - Augere Baptiste
+##Web Project: Pazu 
 
-    Ce projet à été réalisé avec différents technologies comme Vuejs, Pug 
-        Le projet ce divise en deux parties Front et Back
+
+Ce projet à été réalisé avec différents technologies : Java, Js, Vuejs, Pug. 
+Le projet ce divise en deux parties front et back.
 
 Rappel des problèmatiques 
 
@@ -12,7 +12,7 @@ Une API permettant de créer des sondages sur des lieux et date de rendez-vous.
 
 Une API permettant de voté sur les sondages."
 
-Comme base de donnée nous avons utilisé Docker. (lien de DL : https://www.docker.com/products/docker-desktop)
+Comme base de donnée nous avons utilisé postgresql que nous initialison avec Docker. (lien de DL : https://www.docker.com/products/docker-desktop)
 
 Pour initialiser le projet, suivre les instructions de "Project setup"
 
