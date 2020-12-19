@@ -64,11 +64,7 @@ export default {
                         }
                     })
                     this.refresh()
-                },
-                hideModal() {
-                  this.$refs['my-modal'].hide()
-                },
-
+                }
     },
     components: {
 

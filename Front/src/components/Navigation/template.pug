@@ -16,7 +16,7 @@
 
 
             li.nav-item(v-show="this.$session.get('token')!==undefined")
-              b-button.nav-link.active(aria-current='page' @click="logout" ) Logout
+              a.nav-link.active(aria-current='page' href='/#/' @click="logout" ) Logout
 
     b-col.text-center(style="\
                      background-image: url('https://cdn.wallpapersafari.com/72/55/aCGcy2.jpg');\

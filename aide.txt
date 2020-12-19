@@ -1,0 +1,7 @@
+Utiliser Axios pour consommer des API:
+https://fr.vuejs.org/v2/cookbook/using-axios-to-consume-apis.html?
+
+BootstrapVue:
+https://bootstrap-vue.org/
+
+https://pughtml.com/
