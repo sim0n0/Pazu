@@ -6,7 +6,7 @@ Le projet se divise en deux parties front et back.
 
 Rappel des problématiques :
 
-* Une API permettant la gestion d'utilisateur (inscription, login, éditions du compte etc ...)
+* Une API permettant la gestion d'utilisateur (inscription, login)
 
 * Une API permettant de créer des sondages sur des lieux et date de rendez-vous. 
 
