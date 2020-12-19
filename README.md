@@ -1,18 +1,18 @@
 ## Web Project: Pazu 
 
 
-Ce projet à été réalisé avec différents technologies : Java, Js, Vuejs, Pug. 
+Ce projet a été réalisé avec différentes technologies : Java, Js, Vuejs, Pug. 
 Le projet se divise en deux parties front et back.
 
 Rappel des problématiques :
 
-* Une API permettant la gestion d'utilisateur (inscription, login, édition du compte etc ...)
+* Une API permettant la gestion d'utilisateur (inscription, login, éditions du compte etc ...)
 
 * Une API permettant de créer des sondages sur des lieux et date de rendez-vous. 
 
-* Une API permettant de voté sur les sondages.
+* Une API permettant de voter sur les sondages.
 
-Comme base de donnée nous avons utilisé postgresql que nous initialisons avec Docker. (lien de DL : https://www.docker.com/products/docker-desktop)
+Comme base de données nous avons utilisé Postgresql que nous initialisons avec Docker. (lien de DL : https://www.docker.com/products/docker-desktop)
 
 Pour initialiser le projet, suivre les instructions de "Project setup"
 
